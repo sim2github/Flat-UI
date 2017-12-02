@@ -5,7 +5,7 @@
 // -------------------------
 
 .ui-slider {
-  @include progress();
+  @extend .progress;
   margin-bottom: 20px;
   position: relative;
   cursor: pointer;

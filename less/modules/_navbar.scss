@@ -269,7 +269,7 @@
   .form-control,
   .input-group-addon,
   .btn { 
-    @include navbar-input(); 
+    @extend .navbar-input; 
   }
 
   .btn {

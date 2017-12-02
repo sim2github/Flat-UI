@@ -1,7 +1,7 @@
 // Select variants
 //
 
-@mixin select-variant($color, $background, $hover-background, $active-background, $disabled-background: $gray-light, $arrow-color) {
+@mixin select-variant($color, $background, $hover-background, $active-background, $disabled-background: $gray-light, $arrow-color: $inverse) {
   .select2-choice {
     color: $color;
     background-color: $background;
@@ -18,13 +18,15 @@
       background: $active-background;
       border-color: $active-background;
     }
-    .select2-container-disabled& {
-      &,
-      &:hover,
-      &:focus,
-      &:active {
-        background-color: $disabled-background;
-        border-color: $background;
+    @at-root {
+      .select2-container-disabled#{&} {
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: $disabled-background;
+          border-color: $background;
+        }
       }
     }
 
@@ -35,21 +37,23 @@
 }
 
 @mixin select-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
-  @mixin button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius),
-  padding-right: ($padding-horizontal * 2 + 9px),
-  min-height: round(($line-height*$font-size + 2*$padding-vertical)), // we need min-height for empty ones
+  @include button-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius);
+  padding-right: ($padding-horizontal * 2 + 9px);
+  min-height: round(($line-height*$font-size + 2*$padding-vertical)); // we need min-height for empty ones
 }
 
-.multiple-select-variant($background, $hover-background, $border-color) {
-  .select2-container-multi& {
-      border-color: $border-color;
-
-      .select2-search-choice {
-        background-color: $background;
-
-        &:hover {
-          background-color: $hover-background;
+@mixin multiple-select-variant($background, $hover-background, $border-color) {
+  @at-root {
+    .select2-container-multi#{&} {
+        border-color: $border-color;
+  
+        .select2-search-choice {
+          background-color: $background;
+  
+          &:hover {
+            background-color: $hover-background;
+          }
         }
-      }
+    }
   }
 }

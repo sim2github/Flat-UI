@@ -18,13 +18,13 @@
 
 .input-group-hg > .form-control,
 .input-group-hg > .input-group-addon,
-.input-group-hg > .input-group-btn > .btn { @include input-hg(); }
+.input-group-hg > .input-group-btn > .btn { @extend .input-hg; }
 .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .btn { @include input-lg(); }
+.input-group-lg > .input-group-btn > .btn { @extend .input-lg; }
 .input-group-sm > .form-control,
 .input-group-sm > .input-group-addon,
-.input-group-sm > .input-group-btn > .btn { @include input-sm(); }
+.input-group-sm > .input-group-btn > .btn { @extend .input-sm; }
 
 // Text input groups
 // -------------------------
@@ -120,23 +120,25 @@
   .input-group-btn + .form-control,
   .input-group-btn:last-child .btn {
     @include border-right-radius(20px);
-
-    .input-group-hg& {
-      @include border-right-radius(27px);
-    }
-    .input-group-lg& {
-      @include border-right-radius(25px);
+    @at-root {
+      .input-group-hg#{&} {
+        @include border-right-radius(27px);
+      }
+      .input-group-lg#{&} {
+        @include border-right-radius(25px);
+      }
     }
   }
   .form-control:first-child,
   .input-group-btn:first-child .btn {
     @include border-left-radius(20px);
-
-    .input-group-hg& {
-      @include border-left-radius(27px);
-    }
-    .input-group-lg& {
-      @include border-left-radius(25px);
+    @at-root {
+      .input-group-hg#{&} {
+        @include border-left-radius(27px);
+      }
+      .input-group-lg#{&} {
+        @include border-left-radius(25px);
+      }
     }
   }
   // Remove left padding for .form-control after button

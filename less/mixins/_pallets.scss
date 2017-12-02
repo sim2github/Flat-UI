@@ -1,11 +1,20 @@
 // Pallet color variants
 //
+// $color-names: 'turquoise' 'green-sea' 'emerald' 'nephritis' 'peter-river' 'belize-hole' 'amethyst' 'wisteria' 'wet-asphalt' 'midnight-blue' 'sun-flower' 'orange' 'carrot' 'pumpkin' 'alizarin' 'pomegranate' 'clouds' 'silver' 'concrete' 'asbestos';
+
 
 @mixin pallet-variant($first-color, $second-color) {
   .palette-#{$first-color} {
-    background-color: "#{$#{$first-color}}";
+    background-color: "$#{$first-color}";
   }
-  .palette-#{$second-color} {
-    background-color: "#{$#{$second-color}}";
+    .palette-#{$second-color} {
+    background-color: "$#{$second-color}";
   }
 }
+
+// TODO create palett to list of colors
+// @each $c in $color-names {
+//   .palette-#{$c} {
+//     background-color: $#{$c}
+//   }
+// }

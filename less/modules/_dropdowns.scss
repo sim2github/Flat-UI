@@ -108,7 +108,7 @@
 //
 // Add extra class to `.dropdown-menu` to flip the alignment of the dropdown
 // menu with the parent.
-.dropdown-menu-right {
+@mixin dropdown-menu-right() {
   left: auto; // Reset the default from `.dropdown-menu`
   right: 0;
 }
@@ -118,7 +118,7 @@
 //
 // This is only for left-aligning a dropdown menu within a `.navbar-right` or
 // `.pull-right` nav component.
-.dropdown-menu-left {
+@mixin dropdown-menu-left() {
   left: 0;
   right: auto;
 }

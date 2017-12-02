@@ -82,70 +82,77 @@
 
 // Alternate color variants
 .select-default {
-  @include select-variant($select-default-color, $select-default-bg, $select-default-hover-bg, $select-default-active-bg, $arrow-color: $inverse);
+  @include select-variant($select-default-color, $select-default-bg, $select-default-hover-bg, $select-default-active-bg);
 }
 .select-primary {
-  @include select-variant($select-default-color, $brand-secondary, $select-primary-hover-bg, $select-primary-active-bg, $arrow-color: $inverse);
+  @include select-variant($select-default-color, $brand-secondary, $select-primary-hover-bg, $select-primary-active-bg);
 }
 .select-info {
-  @include select-variant($select-default-color, $brand-info, $select-info-hover-bg, $select-info-active-bg, $arrow-color: $inverse);
+  @include select-variant($select-default-color, $brand-info, $select-info-hover-bg, $select-info-active-bg);
 }
 .select-danger {
-  @include select-variant($select-default-color, $brand-danger, $select-danger-hover-bg, $select-danger-active-bg, $arrow-color: $inverse);
+  @include select-variant($select-default-color, $brand-danger, $select-danger-hover-bg, $select-danger-active-bg);
 }
 .select-success {
-  @include select-variant($select-default-color, $brand-success, $select-success-hover-bg, $select-success-active-bg, $arrow-color: $inverse);
+  @include select-variant($select-default-color, $brand-success, $select-success-hover-bg, $select-success-active-bg);
 }
 .select-warning {
-  @include select-variant($select-default-color, $brand-warning, $select-warning-hover-bg, $select-warning-active-bg, $arrow-color: $inverse);
+  @include select-variant($select-default-color, $brand-warning, $select-warning-hover-bg, $select-warning-active-bg);
 }
 .select-inverse {
-  @include select-variant($select-default-color, $brand-primary, $select-inverse-hover-bg, $select-inverse-active-bg, $arrow-color: $inverse);
+  @include select-variant($select-default-color, $brand-primary, $select-inverse-hover-bg, $select-inverse-active-bg);
 }
 
 // Select sizes
 .select-hg {
-  .select2-container& {
-    > .select2-choice {
-      @include select-size(13px, 20px, $select-font-size-hg, $select-line-height-hg, $border-radius-large);
+  @at-root {
 
-      .filter-option {
-        left: 20px;
-        right: 40px;
-        top: 13px;
-      }
-      .select2-arrow {
-        right: 20px;
-      }
-      > [class^="fui-"] {
-        top: 2px;
+    .select2-container#{&} {
+      > .select2-choice {
+        @include select-size(13px, 20px, $select-font-size-hg, $select-line-height-hg, $border-radius-large);
+  
+        .filter-option {
+          left: 20px;
+          right: 40px;
+          top: 13px;
+        }
+        .select2-arrow {
+          right: 20px;
+        }
+        > [class^="fui-"] {
+          top: 2px;
+        }
       }
     }
   }
 }
 .select-lg {
-  .select2-container& {
-    > .select2-choice {
-      @include select-size(10px, 19px, $select-font-size-lg, $select-line-height-lg, $border-radius-large);
-
-      .filter-option {
-        left: 18px;
-        right: 38px;
+  @at-root {
+    .select2-container#{&} {
+      > .select2-choice {
+        @include select-size(10px, 19px, $select-font-size-lg, $select-line-height-lg, $border-radius-large);
+  
+        .filter-option {
+          left: 18px;
+          right: 38px;
+        }
       }
     }
   }
 }
 .select-sm {
-  .select2-container& {
-    > .select2-choice {
-      @include select-size(9px, 13px, $select-font-size-sm, $select-line-height-sm, $border-radius-base);
-
-      .filter-option {
-        left: 13px;
-        right: 33px;
-      }
-      .select2-arrow {
-        right: 13px;
+  @at-root {
+    .select2-container#{&} {
+      > .select2-choice {
+        @include select-size(9px, 13px, $select-font-size-sm, $select-line-height-sm, $border-radius-base);
+  
+        .filter-option {
+          left: 13px;
+          right: 33px;
+        }
+        .select2-arrow {
+          right: 13px;
+        }
       }
     }
   }

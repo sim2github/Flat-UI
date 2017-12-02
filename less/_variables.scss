@@ -735,6 +735,8 @@ $blockquote-small-color:      inherit;
 $blockquote-border-color:     mix($brand-primary, $inverse, 12%);
 //** Page header border color
 $page-header-border-color:    mix($brand-primary, $inverse, 12%);
+//** Horizontal forms & lists
+$component-offset-horizontal: 180px;
 //** Width of horizontal description list titles
 $dl-horizontal-offset:        $component-offset-horizontal;
 
@@ -746,5 +748,3 @@ $dl-horizontal-offset:        $component-offset-horizontal;
 //** Hr border color
 $hr-border:                   mix($brand-primary, $inverse, 63%);
 
-//** Horizontal forms & lists
-$component-offset-horizontal: 180px;

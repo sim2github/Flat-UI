@@ -47,14 +47,15 @@
     position: relative;
     line-height: 1;
     top: 1px;
-    
-    .btn-xs& {
-      font-size: 11px;
-      top: 0;
+    @at-root {
+      .btn-xs#{&} {
+        font-size: 11px;
+        top: 0;
+      }
+      .btn-hg#{&} {
+        top: 2px;
+      } 
     }
-    .btn-hg& {
-      top: 2px;
-    } 
   }  
 }
 
