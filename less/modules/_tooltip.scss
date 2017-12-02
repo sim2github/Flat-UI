@@ -8,7 +8,7 @@
   line-height: 1.286; // 18px
   z-index: $zindex-tooltip;
 
-  &.in     { .opacity($tooltip-opacity); }
+  &.in     { @include opacity($tooltip-opacity); }
   &.top    { margin-top:  -5px; padding: $tooltip-arrow-width 0; }
   &.right  { margin-left:  5px; padding: 0 $tooltip-arrow-width; }
   &.bottom { margin-top:   5px; padding: $tooltip-arrow-width 0; }

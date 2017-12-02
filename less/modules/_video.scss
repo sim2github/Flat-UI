@@ -448,7 +448,7 @@
   animation: sharp 2s ease infinite;
 }
 
-@mixin sharp-keyframes() {
+@keyframes sharp {
   0% {
     background-color: $vplayer-preloader-primary-bg;
     border-radius: 10px;
@@ -464,20 +464,4 @@
     border-radius: 10px;
     transform: rotate(360deg);
   }
-}
-
-$-webkit-keyframes sharp {
-  @include sharp-keyframes();
-}
-
-$-moz-keyframes sharp {
-  @include sharp-keyframes();
-}
-
-$-o-keyframes sharp {
-  @include sharp-keyframes();
-}
-
-@keyframes sharp {
-  @include sharp-keyframes();
 }

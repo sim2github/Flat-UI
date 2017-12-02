@@ -192,7 +192,7 @@
   cursor: text;
   overflow: hidden;
   min-height: 26px;
-  &:extend(.clearfix all);
+  @extend .clearfix;
 
   li {
     float: left;
@@ -308,7 +308,7 @@
 
 // Dropdown container
 .select2-drop {
-  &:extend(.dropdown-menu);
+  @extend .dropdown-menu;
   min-width: 220px;
   margin-top: 9px;
   visibility: visible;
@@ -437,7 +437,8 @@
   display: none;
 
   input[type="text"] {
-    &:extend(.form-control all, .input-sm all);
+    @extend .form-control;
+    @extend .input-sm;
     width: 100%;
     height: auto !important;
   }

@@ -19,7 +19,7 @@ $share-color: mix($brand-primary, $inverse, 8%);
     font-size: $component-font-size-base;
     line-height: 1.4;
     padding-top: 11px;
-    @include clearfix();
+    @extend .clearfix;
 
     &:first-child {
       padding-top: 0;

@@ -43,7 +43,7 @@
 // Remix the default button sizing classes into new ones for easier manipulation.
 
 .btn-group-xs > .btn {
-  &:extend(.btn-xs);
+  @extend .btn-xs;
 
   & + .dropdown-toggle {
     padding: 6px 9px;
@@ -51,7 +51,7 @@
 }
 
 .btn-group-sm > .btn {
-  &:extend(.btn-sm);
+  @extend .btn-sm;
 
   & + .dropdown-toggle {
     padding: 9px 13px;
@@ -59,7 +59,7 @@
 }
 
 .btn-group-lg > .btn {
-  &:extend(.btn-lg);
+  @extend .btn-lg;
 
   & + .dropdown-toggle {
     padding: 10px 19px;
@@ -67,7 +67,7 @@
 }
 
 .btn-group-hg > .btn {
-  &:extend(.btn-hg);
+  @extend .btn-hg;
 
   & + .dropdown-toggle {
     padding: 13px 20px;

@@ -115,17 +115,17 @@ label {
 // Form control sizing
 .input-sm,
 .form-group-sm .form-control {  
-  .input-size($input-height-sm; 6px; 10px; $input-font-size-sm; $input-line-height-sm);
+  @include input-size($input-height-sm, 6px, 10px, $input-font-size-sm, $input-line-height-sm);
 }
 
 .input-lg,
 .form-group-lg .form-control {  
-  .input-size($input-height-lg; 10px; 15px; $input-font-size-lg; $input-line-height-lg);
+  @include input-size($input-height-lg, 10px, 15px, $input-font-size-lg, $input-line-height-lg);
 }
 
 .input-hg,
 .form-group-hg .form-control {  
-  .input-size($input-height-hg; 10px; 16px; $input-font-size-hg; $input-line-height-hg);
+  @include input-size($input-height-hg, 10px, 16px, $input-font-size-hg, $input-line-height-hg);
 }
 
 // Form control feedback states
@@ -172,13 +172,13 @@ label {
 
 // Feedback states
 .has-success {
-  .form-control-validation($brand-success; $brand-success);
+  @include form-control-validation($brand-success, $brand-success);
 }
 .has-warning {
-  .form-control-validation($brand-warning; $brand-warning);
+  @include form-control-validation($brand-warning, $brand-warning);
 }
 .has-error {
-  .form-control-validation($brand-danger; $brand-danger);
+  @include form-control-validation($brand-danger, $brand-danger);
 }
 
 .form-control[disabled] + .form-control-feedback,
@@ -243,12 +243,12 @@ fieldset[disabled] .form-control + .form-control-feedback,
 
   // Make form groups behave like rows
   .form-group {
-    @mixin make-row(),
+    @include make-row();
   }
 
   .form-control-static {
-    padding-top: 6px,
-    padding-bottom: 6px,
+    padding-top: 6px;
+    padding-bottom: 6px;
   }
 
   // Form group sizes
@@ -264,7 +264,7 @@ fieldset[disabled] .form-control + .form-control-feedback,
       }
     }
     .form-control {
-      &:extend(.input-hg);
+      @extend .input-hg;
     }
   }
   .form-group-lg {
