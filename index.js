@@ -1,2 +1,2 @@
-// You can require() this file in a CommonJS environment.
-require('./dist/js/flat-ui.js');
+import './js/radiocheck';
+import './less/flat-ui.scss'
