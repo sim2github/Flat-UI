@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import Config from 'webpack-config';
 import pkg from '../package.json';
+import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
 
 // Build comment
 const signature = ` Flat UI Free v${pkg.version} (${pkg.homepage})

@@ -83,7 +83,7 @@ $font-family-demo:              "Helvetica Neue", Helvetica, Arial, sans-serif;
 $font-family-monospace:          Monaco, Menlo, Consolas, "Courier New", monospace;
 $font-size-base:                 18px;
 
-$local-font-path:               "../fonts/lato/";
+$local-font-path:               "../../fonts/lato/";
 $local-font-name:               "lato-regular";
 $local-font-svg-id:             "latoregular";
 $local-font-name-light:         "lato-light";
@@ -117,7 +117,7 @@ $headings-color:            inherit;
 //
 //## Specify custom locations of the include Glyphicons icon font.
 
-$fui-icon-font-path:            "../fonts/glyphicons/";
+$fui-icon-font-path:            "../../fonts/glyphicons/";
 $fui-icon-font-name:            "flat-ui-icons-regular";
 $fui-icon-font-svg-id:          "flat-ui-icons-regular";
 
